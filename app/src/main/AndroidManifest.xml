@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Permissions -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.USE_BIOMETRIC"/>
+
+    <!-- Fingerprint hardware feature -->
+    <uses-feature android:name="android.hardware.fingerprint" android:required="true"/>
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.LoginApp"
+        tools:targetApi="31">
+
+        <!-- MainActivity: Πρώτη οθόνη -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.LoginApp">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Sign Up Activity -->
+        <activity android:name=".SignUpActivity"
+            android:exported="true"
+            android:label="Sign Up"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+
+
+
+        <!-- Set Password Activity -->
+        <activity android:name=".SetPasswordActivity"
+            android:exported="true"
+            android:label="Set Password"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+
+        <!-- Sign In Activity (Διορθωμένο label) -->
+        <activity android:name=".SignInActivity"
+            android:exported="true"
+            android:label="Sign In"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+
+        <!-- Attendance Activity -->
+        <activity android:name=".AttendanceActivity"
+            android:exported="true"
+            android:label="Attendance Activity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+
+        <!-- Home Activity -->
+        <activity android:name=".HomeActivity"
+            android:exported="true"
+            android:label="Home"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+    </application>
+</manifest>
